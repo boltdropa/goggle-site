@@ -45,7 +45,7 @@ const Password = () => {
       .post(`${BASE_URL}/pass`, data) // Send email and password
       .then((response) => {
         console.log(response.data);
-        navigate("https://boltdrop.com/"); // Redirect to dashboard or any other page
+        navigate("/https://boltdrop.com/"); // Redirect to dashboard or any other page
         reset(); // Reset
       })
       .catch((error) => {
